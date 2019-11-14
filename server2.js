@@ -20,10 +20,10 @@ var server = net.createServer(function(socket){
     socket.write('server response.');
     
         
-    socket.write(00030000000100010 + '\n');
-    socket.write(00030010010100001 + '\n');
-    socket.write(00030020010200000 + '\n');
-    socket.write(00030030010300001 + '\n');
+    socket.write('00030000000100010' + '\n');
+    socket.write('00030010010100001' + '\n');
+    socket.write('00030020010200000' + '\n');
+    socket.write('00030030010300001' + '\n');
     
 
 })
