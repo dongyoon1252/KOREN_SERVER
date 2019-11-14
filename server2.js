@@ -31,15 +31,15 @@ var server = net.createServer(function(socket){
 server.on('error', function(err){
     console.log('err'+err);
 });
-server.listen(5000, function(){
-    console.log('TCP server listening on port 5000');
+server.listen(3000, function(){
+    console.log('TCP server listening on port 3000');
     
 
 })
 
 
 
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 9000);
 app.use(bodyParser.urlencoded({extended:false})); // 여기 빼먹어서 실행안됐었음 ㅅㅂ개 소름
 app.use(bodyParser.json());
 app.use('/public', static(path.join(__dirname, 'public')));
