@@ -19,6 +19,12 @@ var server = net.createServer(function(socket){
     console.log(socket.address().address + "connected.");
     socket.write('server response.');
     
+        
+    socket.write(00030000000100010 + '\n');
+    socket.write(00030010010100001 + '\n');
+    socket.write(00030020010200000 + '\n');
+    socket.write(00030030010300001 + '\n');
+    
 
 })
 
@@ -28,11 +34,7 @@ server.on('error', function(err){
 server.listen(5000, function(){
     console.log('TCP server listening on port 5000');
     
-    
-    socket.write(road01 + '\n');
-    socket.write(road02 + '\n');
-    socket.write(road03 + '\n');
-    socket.write(road04 + '\n');
+
 })
 
 
